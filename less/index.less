@@ -1,0 +1,37 @@
+@import "reset";
+@import "variables";
+
+body {
+    background-color: @primaryColor;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 600px;
+    border-radius: 10px;
+    background-color: @secundaryColor;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    animation: hue_effect 2s ease-in-out infinite;
+}
+
+@keyframes hue_effect {
+    0%, 100% {
+        filter: hue-rotate(0deg);
+    }
+    50% {
+        filter: hue-rotate(360deg);
+    }
+}
